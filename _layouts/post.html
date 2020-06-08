@@ -1,0 +1,28 @@
+---
+layout: default
+---
+{% for author in site.authors %}
+{% assign author_id = author.id | replace: "/authors/", "" %}
+{% if author_id == page.author %}
+<div class="container">
+	<div id="banner" style="height: 500px; background: url({{page.img}}); background-size: cover; background-repeat: no-repeat; margin-top: 50px; background-position: center center">
+    </div>
+    <h1 class="merriweather wow fadeIn" data-wow-delay="50ms">{{ page.title }}</h1>
+    <h5 class="wow fadeIn" data-wow-delay="150ms">{{ page.description }}</h5>
+    <br>
+    <div id="profpic" class="valign-wrapper wow fadeIn" data-wow-delay="250ms">
+        <img src="{{author.img}}" class="circle" height="50">
+        <h5>
+            <a style="margin-left: 20px" class="merriweather" rel="author" href="{{site.baseurl}}/authors/{{page.author}}" title="{{ author.name }}">
+                {{ author.name }}
+            </a> &middot; <a href="http://instagram.com/{{author.instagram}}"><i class="fa fa-instagram"></i></a> <a href="http://twitter.com/{{author.twitter}}"><i class="fa fa-twitter"></i></a>
+        </h5>
+    </div>
+    <br>
+    <b>{{ page.date | date: "%B %-d, %Y" }}</b>
+    <div class="content wow fadeIn" data-wow-delay="300ms">
+        {{content}}
+    </div>
+</div>
+{% endif %}
+{% endfor %}

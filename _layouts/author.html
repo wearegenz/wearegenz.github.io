@@ -1,0 +1,35 @@
+---
+layout: default
+---
+{% assign author_id = page.id | replace: "/authors/", "" %}
+<div class="container" style="padding-top: 50px; padding-bottom: 50px">
+    <img src="{{page.img}}" class="circle" height="100">
+    <h3 class="merriweather">{{ page.name }} &middot; <a href="http://instagram.com/{{page.instagram}}"><i class="fa fa-instagram"></i></a> <a href="http://twitter.com/{{page.twitter}}"><i class="fa fa-twitter"></i></a>
+    </h3>
+    <h6>{{page.bio}}</h6>
+    <br>
+    <div class="row">
+        {% for post in site.posts %}
+        {% if post.author == author_id %}
+        <div class="col s12 m4 wow fadeIn" data-wow-delay="{{forloop.index | times: 150}}ms">
+            <div class="card hoverable">
+                <div class="card-image">
+                    <img src="{{ post.img }}">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <span class="card-title merriweather">{{ post.title }}</span>
+                        <p>{{ post.date | date: "%B %-d" }} - {{ post.description }}</p>
+                        <p><strong>{{ page.name }}</strong></p>
+                    </div>
+                    <div class="card-action">
+                        <a class="grey-text text-darken-4" href="{{site.baseurl}}/{{ post.url }}">Read More <i class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+    {{content}}
+</div>
