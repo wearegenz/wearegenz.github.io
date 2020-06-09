@@ -47,24 +47,85 @@ layout: default
     <h3 class="merriweather">Photos from the Ground</h3>
 
     <div class="row">
-        {% for link in site.images %}
-        {% if forloop.index <= 3 %}
+<!--        {% for link in site.images %}-->
+<!--        {% if forloop.index <= 3 %}-->
+<!--        -->
 
+<!--        <div class="col m4">-->
+<!--            <div class="card">-->
+<!--                <div class="card-image">-->
+<!--                    <img src="{{ link.img }}">-->
+<!--                    <span class="card-title merriweather" style="font-size: small;"> {{ link.title }}</span>-->
+<!--                </div>-->
+<!--                <div class="card-content">-->
+<!--                    <p class="merriweather"> {{ link.author }}</p>-->
+<!--                    <p class="merriweather"> {{ link.details }}</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--    {% endif %}-->
+<!--    {% endfor %}-->
         <div class="col m4">
             <div class="card">
                 <div class="card-image">
-                    <img src="{{ link.img }}">
-                    <span class="card-title merriweather" style="font-size: small;"> {{ link.title }}</span>
+                    <img src="{{ site.images[0].img }}">
+                    <span class="card-title merriweather" style="font-size: small;"> {{ site.images[0].title }}</span>
                 </div>
                 <div class="card-content">
-                    <p class="merriweather"> {{ link.author }}</p>
-                    <p class="merriweather"> {{ link.details }}</p>
+                    <p class="merriweather"> {{ site.images[0].author }}</p>
+                    <p class="merriweather"> {{ site.images[0].details }}</p>
                 </div>
             </div>
         </div>
-
-    {% endif %}
-    {% endfor %}
+        <div class="col m4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="{{ site.images[1].img }}">
+                    <span class="card-title merriweather" style="font-size: small;"> {{ site.images[1].title }}</span>
+                </div>
+                <div class="card-content">
+                    <p class="merriweather"> {{ site.images[1].author }}</p>
+                    <p class="merriweather"> {{ site.images[1].details }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col m4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="{{ site.images[2].img }}">
+                    <span class="card-title merriweather" style="font-size: small;"> {{ site.images[2].title }}</span>
+                </div>
+                <div class="card-content">
+                    <p class="merriweather"> {{ site.images[2].author }}</p>
+                    <p class="merriweather"> {{ site.images[2].details }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col m4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="{{ site.images[6].img }}">
+                    <span class="card-title merriweather" style="font-size: small;"> {{ site.images[6].title }}</span>
+                </div>
+                <div class="card-content">
+                    <p class="merriweather"> {{ site.images[6].author }}</p>
+                    <p class="merriweather"> {{ site.images[6].details }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col m4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="{{ site.images[7].img }}">
+                    <span class="card-title merriweather" style="font-size: small;"> {{ site.images[7].title }}</span>
+                </div>
+                <div class="card-content">
+                    <p class="merriweather"> {{ site.images[7].author }}</p>
+                    <p class="merriweather"> {{ site.images[7].details }}</p>
+                </div>
+            </div>
+        </div>
 
 
 
