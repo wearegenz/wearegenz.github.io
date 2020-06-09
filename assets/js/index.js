@@ -1,7 +1,7 @@
 new WOW().init();
 
-words = ['independent', 'confident', 'self-reliant', 'progressive', 'inclusive', 'tolerant', 
-	'entrepreneurs', 'activists', 'justice', 'pursuers', 'leaders', 'innovators', 'world changers']
+words = ['disruptors', 'independent', 'confident', 'progressive', 'inclusive', 'tolerant',
+	'entrepreneurs', 'activists', 'leaders', 'innovators', 'world changers', ];
 
 var i = 0;
 var changeText = setInterval(() => {
@@ -12,3 +12,9 @@ var changeText = setInterval(() => {
 		$( "#textchanging").fadeIn("slow");
 		i++;
 }, 1500)
+
+$(".more").toggle(function(){
+	$(this).text("less..").siblings(".complete").show();
+}, function(){
+	$(this).text("more..").siblings(".complete").hide();
+});

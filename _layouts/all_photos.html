@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<div class="container">
+    <h1 class="merriweather">All Photos</h1>
+    <div class="row">
+        {% for link in site.images %}
+        <div class="col m4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="{{ link.img }}">
+                    <span class="card-title merriweather"> {{ link.title }}</span>
+                </div>
+                <div class="card-content">
+                    <p class="merriweather"> {{ link.author }}</p>
+                    <p class="merriweather"> {{ link.details }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
