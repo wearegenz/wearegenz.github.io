@@ -1,7 +1,8 @@
 new WOW().init();
 
-words = ['independent','disruptors', 'confident', 'progressive', 'inclusive', 'tolerant',
-	'entrepreneurs', 'activists', 'leaders', 'innovators', 'world changers'];
+words = ['', 'independent','disruptors', 'confident', 'progressive', 'inclusive', 'tolerant',
+	'entrepreneurs', 'activists', 'leaders', 'innovators', 'world changers', 'Vivek', 'Ben', 'independent','disruptors', 'confident', 'progressive', 'inclusive', 'tolerant',
+	'entrepreneurs', 'activists', 'leaders', 'innovators', 'world changers',];
 
 var i = 0;
 var changeText = setInterval(() => {
