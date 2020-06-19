@@ -1,0 +1,94 @@
+---
+layout: default
+---
+
+<!--<div class="container">-->
+<!--    <h1 class="merriweather">All Photos</h1>-->
+<!--    <div class="row">-->
+<!--        {% for link in site.images %}-->
+<!--        <div class="col m4">-->
+<!--            <div class="card">-->
+<!--                <div class="card-image">-->
+<!--                    <img src="{{ link.img }}">-->
+<!--                    <span class="card-title merriweather" style="font-size: small;"> {{ link.title }}</span>-->
+<!--                </div>-->
+<!--                <div class="card-content">-->
+<!--                    <p class="merriweather"> {{ link.author }}</p>-->
+<!--                    <p class="merriweather"> {{ link.details }}</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        {% endfor %}-->
+<!--    </div>-->
+<!--</div>-->
+
+<div class="container">
+    <h1 class="merriweather">Graphic Designs</h1>
+
+    {% assign current = site.graphics[0].title %}
+    <span class="card-title merriweather" style="font-size: large;"> {{ site.graphics[0].title }}</span>
+    <p class="merriweather"> {{ site.graphics[0].author }}</p>
+    <p class="merriweather"> {{ site.graphics[0].details }}</p>
+    <div class="row">
+        {% for link in site.graphics %}
+
+        {% if current != link.title %}
+    </div>
+    <span class="card-title merriweather" style="font-size: large;"> {{ link.title }}</span>
+    <p class="merriweather"> {{ link.author }}</p>
+    <p class="merriweather"> {{ link.details }}</p>
+    <div class="row">
+        {% endif %}
+
+        <div class="col m4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="{{ link.img }}">
+
+                </div>
+            </div>
+        </div>
+        {% assign current = link.title %}
+        {% endfor %}
+    </div>
+
+<!--    <h3>Design for US :-->
+<!--    </h3>-->
+
+<!--    <p class="merriweather" style="font-size: large;">The American people are beginning to lose trust in mainstream media networks.-->
+<!--        These for-profit corporations have undermined the truth and pushed narratives for selfish agendas.-->
+<!--    </p>-->
+
+
+
+
+
+
+
+    <!--        {% assign current = site.images[0].title %}-->
+    <!--        <span class="card-title merriweather" style="font-size: small;"> {{ site.images[0].title }}</span>-->
+    <!--        <p class="merriweather"> {{ site.images[0].author }}</p>-->
+    <!--        <p class="merriweather"> {{ site.images[0].details }}</p>-->
+    <!--        {% for link in site.images %}-->
+
+    <!--        {% if current != link.title %}-->
+    <!--        <span class="card-title merriweather" style="font-size: small;"> {{ link.title }}</span>-->
+    <!--        <p class="merriweather"> {{ link.author }}</p>-->
+    <!--        <p class="merriweather"> {{ link.details }}</p>-->
+    <!--        {% endif %}-->
+
+    <!--        <div class="col m4">-->
+    <!--            <div class="card">-->
+    <!--                <div class="card-image">-->
+    <!--                    <img src="{{ link.img }}">-->
+
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        {% assign current = link.title %}-->
+    <!--        {% endfor %}-->
+
+</div>
+
+
+
