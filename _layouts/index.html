@@ -215,7 +215,6 @@ layout: default
 <h3 class="merriweather">Featured Partners</h3>
 <div class="row">
     {% for link in site.partners %}
-    {% if forloop.index <= 3 %}
     <div class="col s12 m4">
         <div class="card blue-grey darken-4">
             <div class="card-content white-text">
@@ -227,7 +226,6 @@ layout: default
             </div>
         </div>
     </div>
-    {% endif %}
     {% endfor %}
 
 </div>
