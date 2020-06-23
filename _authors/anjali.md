@@ -1,8 +1,9 @@
 ---
 layout: author
 name: "Anjali Deepak"
-instagram: ""
+instagram: "anjali_deepak"
 twitter: ""
 img: ""
-bio: ""
+bio: "Anjali is a rising sophomore at college and is intending to concentrate in Neuroscience. She loves all things brain-related and connecting our brain’s tendencies to relevant matters. 
+"
 ---
