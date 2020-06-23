@@ -63,11 +63,12 @@ layout: default
 
 
     <div class="row">
-        <h2>{{ site.posts[0].title }}</h2>
+        {% assign last = site.posts.size | minus: 1 %}
+        <h2>{{ site.posts[last].title }}</h2>
 
-        <img src="{{ site.posts[0].img }}" align="right" style="width: 50%;">
-        <p>{{ site.posts[0].teaser }}</p>
-        <a href="{{site.url}}/{{ site.posts[0].url }}" style="text-align: center;"><h5>See Full Article <i class="fa fa-angle-right"></i></h5></a>
+        <img src="{{ site.posts[last].img }}" align="right" style="width: 50%;">
+        <p>{{ site.posts[last].teaser }}</p>
+        <a href="{{site.url}}/{{ site.posts[last].url }}" style="text-align: center;"><h5>See Full Article <i class="fa fa-angle-right"></i></h5></a>
     </div>
 
 <!--    <h1 class="merriweather">Featured Posts</h1>-->
