@@ -1,7 +1,7 @@
 ---
 layout: author
 name: "Naja Kreisman"
-instagram: "https://www.instagram.com/gnawjay/"
+instagram: "gnawjay"
 twitter: ""
 img: ""
 bio: ""
